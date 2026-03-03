@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TruthLens - Fake Image Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <img src="{{ url_for('static', filename='logo.png') }}" class="top-logo">
+
+    <h1>TruthLens AI</h1>
+    <h2>Fake Image Detector</h2>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        
+        <input type="file" name="file" id="imageInput" accept="image/*" required>
+
+        <button type="button" id="previewBtn">Preview</button>
+
+        <div id="imageBox">
+            <img id="preview">
+        </div>
+
+        <button type="submit" class="check-btn">Check Image</button>
+    </form>
+
+    {% if label %}
+    <div id="result">
+        <h3>Prediction: 
+            <span class="{% if label == 'FAKE' %}fake{% else %}real{% endif %}">
+                {{ label }}
+            </span>
+        </h3>
+        <p>Fake Probability: {{ probability }}</p>
+        <p>Confidence: {{ confidence }}</p>
+    </div>
+    {% endif %}
+
+</div>
+
+<footer>
+    <p>© 2026 TruthLens AI</p>
+    <p>Developed by <strong>Piyush</strong>, <strong>Krishna</strong>, <strong>Sameer</strong></p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
