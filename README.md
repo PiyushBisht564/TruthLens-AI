@@ -16,21 +16,32 @@ TruthLens-AI is a deep learning–based web application that detects whether an 
 
 ⚡ Fast prediction using optimized model loading
 
-🛠️ Tech Stack
+Slide — Technologies Used
+Frontend
 
-Python
+HTML – Structure of the web pages
 
-Flask
+CSS – Styling and layout of the website
 
-PyTorch
+JavaScript – Handles user interactions and image upload
 
-timm
+Backend
 
-OpenCV
+Python – Main programming language
 
-HTML / CSS
+Flask – Lightweight web framework used to handle requests and connect frontend with the AI model
 
-JavaScript
+AI / Machine Learning
+
+PyTorch – Deep learning framework used to run the trained model
+
+Pretrained Image Classification Model – Used to detect fake or manipulated images
+
+Tools
+
+VS Code – Development environment
+
+GitHub – Version control and project collaboration
 
 📁 Project Structure
 TruthLens-AI/
@@ -57,3 +68,36 @@ The model outputs:
 Real / Fake classification
 
 Confidence percentage
+
+User Uploads Image
+        ↓
+Frontend sends request
+        ↓
+Flask Backend receives image
+        ↓
+Image Preprocessing
+        ↓
+AI Model Prediction
+        ↓
+Result returned to frontend
+
+Future Implementation
+
+Video Deepfake Detection
+Extend the system to detect fake or manipulated videos, not just images.
+
+Training on Larger Datasets
+Improve model accuracy by training on more diverse and modern AI-generated images.
+
+Real-Time Detection
+Implement real-time image analysis for faster results.
+
+Cloud Deployment
+Deploy the system on cloud platforms so users can access it online.
+
+Improved User Interface
+Enhance the website with better design and user experience.
+
+website : https://huggingface.co/spaces/Piyush871397/TruthLens-AI
+model : https://www.kaggle.com/code/dima806deepfake-vs-real-faces-detection-vit
+
